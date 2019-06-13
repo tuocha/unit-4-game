@@ -1,0 +1,86 @@
+body {
+    background: paleturquoise;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: firebrick;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.character-chooser{
+    height: 150px;
+    width: 80%;
+    text-align: center;
+    margin-left: 20%;
+    /* position: relative; */
+}
+
+img {
+    overflow: none;
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    float: left;
+    margin: 10% 2%;
+}
+
+.identifier {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: tan;
+    z-index: 5;
+    /* position: absolute; */
+    float:left;
+    /* margin-left: 15%; */
+    /* margin-top: -30%; */
+}
+
+#jorah {
+    color: darkorange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+#arya {
+    margin-left: 25%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+#torgo {
+    color: royalblue;
+    margin-left: 25%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#brienne {
+    color:rosybrown;
+    margin-left: 11%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#chosen-character {
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24pt;
+}
+
+#defenders {
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24pt;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    width: 20%;
+}
+
+#battle {
+    height: 100%;
+    width: 10%;
+    z-index: 0;
+    /* display: none; */
+    margin-left: 30%;
+    margin-top: -16%;
+}
