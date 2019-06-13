@@ -13,21 +13,21 @@ $(document).ready(function () {
             health: 120,
             attack: 14,
             image: "assets/images/jorah.jpg",
-            enemyAttackBack: 16
+            enemyAttackBack: 13
         },
         "brienne of tarth": {
             name: "brienne of tarth",
             health: 100,
             attack: 12,
             image: "assets/images/brienne.webp",
-            enemyAttackBack: 21
+            enemyAttackBack: 18
         },
         "grey worm": {
             name: "grey worm",
             health: 115,
             attack: 10,
             image: "assets/images/grey worm.jpg",
-            enemyAttackBack: 23
+            enemyAttackBack: 20
         }
     }
 
@@ -145,7 +145,7 @@ $(document).ready(function () {
         var name = $(this).attr('data-name');
 
         //conditonal statement denoting if there is no opponent, the clicked enemy will become it
-        if ($("#defender").children().length === 0) {
+        if ($("#opponent").children().length === 0) {
             opponent = characters[name];
             refreshCharacter(opponent, "#opponent");
 
