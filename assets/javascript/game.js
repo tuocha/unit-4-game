@@ -92,11 +92,11 @@ $(document).ready(function () {
     // function that handles restarting the game after victory or defeat
     var restartGame = function (resultMessage) {
         //creates a restart button and that refreshes the page upon being clicked
-        var restart = $("<button>restart</button>").click(function () {
+        var restart = $("<button id='restart-button'>restart</button>").click(function () {
             location.reload();
         });
         //build a div that will display the victory/defeat message
-        var gameState = $("<div>").text(resultMessage);
+        var gameState = $("<div id='result-message'>").text(resultMessage);
 
         //render the restart button and victory/defeat message to the page
         $("body").append(gameState);
@@ -161,13 +161,13 @@ $(document).ready(function () {
         //if there is an element in the opponent div, combat will occur
         if ($("#opponent").children().length !== 0) {
             //creates messages for battle logic (champion attack, opponent counter)
-            var attackMessage = "You attacked " + opponent.name + " for " + (Math.floor(champion.attack * roundCounter) / 3);
+            var attackMessage = "You attacked " + opponent.name + " for " + (Math.floor(champion.attack * roundCounter) / 2);
 
             var counterAttackMessage = opponent.name + " attacked you back for " + opponent.attack;
             clearMessage();
 
             //reduce opponent's health by your attack value
-            opponent.health -= (Math.floor(champion.attack * roundCounter) / 3);
+            opponent.health -= (Math.floor(champion.attack * roundCounter) / 2);
 
             //if the enemy still has health
             if (opponent.health > 0) {
@@ -189,7 +189,7 @@ $(document).ready(function () {
                     clearMessage();
                     restartGame("You lost. game over!");
                     //disable the attack button
-                    $("attack-button").off("click");
+                    $("#attack-button").off("click");
                 }
             }
             else {
